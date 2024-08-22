@@ -9,6 +9,8 @@
     <title>Category1 | 数学の樹</title>
 
     
+<link href="/tree-of-math-project/avatar.webp" rel="shortcut icon" type="image/x-icon" />
+
 
 
 
@@ -16,10 +18,10 @@
 <meta name="description" content="" />
 
 
-<link rel="canonical" href="https://arbormathematica.com/categories/category1/" />
+<link rel="canonical" href="https://arbormathematica.github.io/tree-of-math-project/categories/category1/" />
 
 
-<meta property="og:url" content="https://arbormathematica.com/categories/category1/">
+<meta property="og:url" content="https://arbormathematica.github.io/tree-of-math-project/categories/category1/">
   <meta property="og:site_name" content="数学の樹">
   <meta property="og:title" content="Category1">
   <meta property="og:locale" content="ja">
@@ -35,7 +37,7 @@
 
 <meta name="generator" content="Hugo 0.133.0">
 
-<link rel="stylesheet" href="/css/output.css" />
+<link rel="stylesheet" href="/tree-of-math-project/css/output.css" />
 
 <style>
 
@@ -46,6 +48,8 @@
 
      
 
+    
+    <link rel="stylesheet" href="/tree-of-math-project/css/custom.css" />
     
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -58,7 +62,10 @@
     <div id="dream-global-bg"></div>
 
     
-<nav class="mt-4 lg:mt-8 py-4">
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
   
   <div class="container flex justify-between px-4">
@@ -66,10 +73,21 @@
     <section class="flex items-center gap-4">
       <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="フリップ">
         <div class="h-10 rounded-full">
-          <img src="/" alt="" />
+          <img src="/tree-of-math-project/img/avatar.webp" alt="数学の樹プロジェクト" />
         </div>
       </div>
 
+      
+      <div>
+        
+        <a href="https://arbormathematica.github.io/tree-of-math-project/" class="text-lg font-semibold cursor-pointer">
+          数学の樹プロジェクト
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">大学数学を定理単位に解説</div>
+        
+      </div>
       
     </section>
 
@@ -101,13 +119,8 @@
 
 
 
-
-
-
-
-
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="アーカイブ">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/posts" title="アーカイブ">
     <ion-icon name="archive"></ion-icon>
     アーカイブ
   </a>
@@ -117,7 +130,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="カテゴリー一覧">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/categories" title="カテゴリー一覧">
     <ion-icon name="grid"></ion-icon>
     カテゴリー一覧
   </a>
@@ -127,9 +140,19 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="タグ一覧">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/tags" title="タグ一覧">
     <ion-icon name="pricetags"></ion-icon>
     タグ一覧
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
   </a>
 </li>
 
@@ -150,16 +173,13 @@
 
       
       
+      
+      
 
       
 
       
       
-
-
-
-
-
       
       
 
@@ -168,30 +188,57 @@
 
 
       
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="アーカイブ">
-  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-</a>
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/posts" title="アーカイブ">
+    <ion-icon name="archive"></ion-icon>
+    アーカイブ
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="カテゴリー一覧">
-  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/categories" title="カテゴリー一覧">
+    <ion-icon name="grid"></ion-icon>
+    カテゴリー一覧
+  </a>
+</li>
 
 
-      
-      
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="タグ一覧">
-  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-</a>
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/tags" title="タグ一覧">
+    <ion-icon name="pricetags"></ion-icon>
+    タグ一覧
+  </a>
+</li>
 
 
-      
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tree-of-math-project/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
 
-      
 
+          
+
+          
+        </ul>
+      </div>
       
     </section>
   </div>
@@ -232,7 +279,7 @@
     <div class="dream-grid">
     
       <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
-        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/test/">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/tree-of-math-project/posts/test/">
   
   <figure>
     
@@ -246,7 +293,7 @@
 
     <p class="date text-base-content/60">
     
-      木曜日, 8月 22, 2024
+      <span data-format="luxon">2024-08-22T13:52:41&#43;09:00</span>
     
     </p>
 
@@ -292,7 +339,9 @@
             
               <div>
   
-  <p>© 2024 数学の樹</p>
+  <p>
+    © 2024 数学の樹
+  </p>
   
 
   
@@ -372,17 +421,35 @@
     </div>
 
     <script>
-  window.lightTheme =  null 
-  window.darkTheme =  null 
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-<script src="/js/grid.js"></script>
+<script src="/tree-of-math-project/js/grid.js"></script>
 
-<script src="/js/main.js"></script>
+<script src="/tree-of-math-project/js/main.js"></script>
 
     
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "ja" }).toFormat("yyyy年M月d日")
+    })
+  }
+</script>
 
 
 
