@@ -3,7 +3,7 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found | 数学の樹</title>
@@ -16,10 +16,10 @@
 <meta name="description" content="" />
 
 
-<link rel="canonical" href="http://localhost:1313/404.html" />
+<link rel="canonical" href="https://tree_of_math.org/404.html" />
 
 
-<meta property="og:url" content="http://localhost:1313/404.html">
+<meta property="og:url" content="https://tree_of_math.org/404.html">
   <meta property="og:site_name" content="数学の樹">
   <meta property="og:title" content="404 Page not found">
   <meta property="og:locale" content="ja">
@@ -64,7 +64,7 @@
   <div class="container flex justify-between px-4">
   
     <section class="flex items-center gap-4">
-      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="フリップ">
         <div class="h-10 rounded-full">
           <img src="/" alt="" />
         </div>
@@ -81,6 +81,10 @@
         
 
 
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
+    <ion-icon name="information-circle"></ion-icon></div>
+</li>
 
 
 
@@ -102,19 +106,32 @@
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="アーカイブ">
+    <ion-icon name="archive"></ion-icon>
+    アーカイブ
+  </a>
+</li>
 
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="カテゴリー一覧">
+    <ion-icon name="grid"></ion-icon>
+    カテゴリー一覧
+  </a>
+</li>
 
 
 
 
-
-
-
-
-
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="タグ一覧">
+    <ion-icon name="pricetags"></ion-icon>
+    タグ一覧
+  </a>
+</li>
 
 
 
@@ -125,25 +142,16 @@
     </div>
     <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
       
-
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
       
       
 
       
-
-      
       
 
-
-
-
-
       
-      
-
-
-
-
 
       
       
@@ -161,9 +169,23 @@
 
       
       
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="アーカイブ">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
 
 
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="カテゴリー一覧">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
 
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="タグ一覧">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
 
 
       
@@ -184,7 +206,7 @@
 <div class="h-[60vh] mx-auto px-4 flex flex-col justify-center items-center prose dark:prose-invert">
   <h1>Oops...You are lost in dream.</h1>
   <p>Don't worry though, click the button below to wake up.</p>
-  <button class="btn my-5" @click="window.location.href = 'http://localhost:1313/'">Back to home</button>
+  <button class="btn my-5" @click="window.location.href = 'https://tree_of_math.org/'">Back to home</button>
 </div>
 
 
@@ -242,6 +264,24 @@
             
             <div class="dream-grid">
   
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">サイトについて</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Cut out summary from your post content here.</p>
+<p>数学の樹は、大学数学を学ぶ上でのつまづきを解消するためのウェブサイトです。</p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
 
   
 
@@ -257,28 +297,6 @@
     <script>
   window.lightTheme =  null 
   window.darkTheme =  null 
-
-  window.hasTwitterEmbed =  null 
-  if (window.hasTwitterEmbed) {
-    
-    window.twttr = (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {}
-      if (d.getElementById(id)) return t
-      js = d.createElement(s)
-      js.id = id
-      js.src = 'https://platform.twitter.com/widgets.js'
-      fjs.parentNode.insertBefore(js, fjs)
-
-      t._e = []
-      t.ready = function (f) {
-        t._e.push(f)
-      }
-
-      return t
-    })(document, 'script', 'twitter-wjs')
-  }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
